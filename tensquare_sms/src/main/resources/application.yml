@@ -1,0 +1,26 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-sms
+  rabbitmq:
+    host: 192.168.56.101
+aliyun:
+  sms:
+    accessKeyId: LTAIYMEmpfe9NCbF
+    accessKeySecret: abkQJRdmJQo8rEYRJHcojyponRfsPQ
+    template_code: SMS_156896396
+    sign_name: 李瑞康网站签名
+miaodi:
+  sms:
+    account_sid: bf95786e2f78458698ad44ec5f61b306
+    auth_token: e4c1a80f25b24fe3a4bf6a8e3cdea034
+    base_url: https://api.miaodiyun.com/20150822
+    resp_data_type: json
+    operation: /industrySMS/sendSMS
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true
