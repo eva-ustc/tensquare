@@ -4,6 +4,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 import ustc.sse.sms.common.HttpUtil;
 import ustc.sse.sms.utils.SmsUtil;
@@ -20,6 +21,7 @@ import java.util.Map;
  */
 @Component
 @RabbitListener(queues = "sms")
+@RefreshScope
 public class SmsListener {
 
     @Autowired

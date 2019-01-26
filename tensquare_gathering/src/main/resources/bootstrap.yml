@@ -1,0 +1,8 @@
+#Springboot默认配置文件 bootstrap(优先级较高)、application
+spring:
+  cloud:
+    config:
+      name: gathering
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:12000

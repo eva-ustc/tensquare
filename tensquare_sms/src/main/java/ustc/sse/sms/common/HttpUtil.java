@@ -11,10 +11,12 @@ import java.util.Date;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
  * http请求工具
  */
+@RefreshScope
 public class HttpUtil{
 
     @Value("${miaodi.sms.account_sid}")

@@ -36,6 +36,22 @@ public class UserController {
 	JwtUtil jwtUtil;
 
     /**
+     * 更新粉丝数
+     * @param userid
+     * @param x
+     */
+	@RequestMapping(value = "/incfans/{userid}/{x}",method = RequestMethod.POST)
+	public void updateFansCount(@PathVariable("userid") String userid,@PathVariable("x") int x){
+	    userService.incFans(userid,x);
+
+    }
+    @RequestMapping(value = "/incfollow/{userid}/{x}",method = RequestMethod.POST)
+    public void updateFollowCount(@PathVariable("userid") String userid,@PathVariable("x") int x){
+
+	    userService.incFollowCount(userid,x);
+    }
+
+    /**
      * 发送验证码,需要企业认证(阿里云短信服务,秒滴短信服务)
      * @param mobile
      * @return
@@ -71,7 +87,7 @@ public class UserController {
             String token = jwtUtil.createJWT(loginUser.getId(),loginUser.getMobile(),"user");
             Map<String,Object> map = new HashMap<>();
             map.put("token",token);
-            map.put("role","user");
+            map.put("roles","user");
             map.put("name",loginUser.getNickname());
             map.put("avatar",loginUser.getAvatar());
             return new Result(true,StatusCode.OK,"登陆成功",map);

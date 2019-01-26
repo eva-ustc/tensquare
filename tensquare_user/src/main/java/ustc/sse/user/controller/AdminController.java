@@ -43,7 +43,7 @@ public class AdminController {
             Map<String,String> map = new HashMap<>();
             map.put("token",token);
             map.put("name",admin.getLoginname());
-            map.put("role","admin");
+            map.put("roles","admin");
             return new Result(true,StatusCode.OK,"登陆成功",map);
         }else {
             return new Result(false,StatusCode.LOGINERROR,"用户名或密码错误");

@@ -9,6 +9,8 @@ spring:
       database: spitdb
   redis:
     host: 192.168.56.101
+  rabbitmq:
+    host: 192.168.56.101
 eureka:
   client:
     service-url:

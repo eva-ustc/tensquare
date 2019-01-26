@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import ustc.sse.qa.client.LabelClient;
 import ustc.sse.qa.pojo.Problem;
 import ustc.sse.qa.service.ProblemService;
 
@@ -40,6 +41,14 @@ public class ProblemController {
     HttpServletRequest request;
     @Autowired
     JwtUtil jwtUtil;
+    @Autowired
+    LabelClient labelClient;
+
+    @RequestMapping(value = "/label/{labelid}",method = RequestMethod.GET)
+    public Result findLabelById(@PathVariable("labelid") String labelid){
+
+        return labelClient.findById(labelid);
+    }
 
     @RequestMapping(value = "/newlist/{labelId}/{page}/{size}", method = RequestMethod.GET)
     public Result newlist(@PathVariable("labelId") String labelId,
