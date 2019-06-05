@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-starter:2.0.4.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/Java_Maven/apache-maven-3.5.4-bin/apache-maven-3.5.4/repository/org/springframework/cloud/spring-cloud-starter/2.0.4.BUILD-SNAPSHOT/spring-cloud-starter-2.0.4.BUILD-20190411.041105-368.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Java_Maven/apache-maven-3.5.4-bin/apache-maven-3.5.4/repository/org/springframework/cloud/spring-cloud-starter/2.0.4.BUILD-SNAPSHOT/spring-cloud-starter-2.0.4.BUILD-20190411.041105-368-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Java_Maven/apache-maven-3.5.4-bin/apache-maven-3.5.4/repository/org/springframework/cloud/spring-cloud-starter/2.0.4.BUILD-SNAPSHOT/spring-cloud-starter-2.0.4.BUILD-20190411.041105-368-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
